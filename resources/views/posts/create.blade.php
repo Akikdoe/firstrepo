@@ -15,9 +15,11 @@
                 <div class="title">
                     <title>Title</title>
                     <input type="text" name="post[title]" placeholder="タイトル">
+                    <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
                     </div>
                   <h2>Body</h2>
                   <textarea name="post[body]" placeholder="今日も1日お疲れさまでした。"></textarea>
+                  <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
                   </div>
                <input type="submit" value="store">
             </form>
